@@ -67,7 +67,7 @@ class controller {
             const picture = await img.composite([{ input: textSVG }]).toBuffer();
             let fileName = `${randomInt(100000)}_${parseInt(Date.now())}.jpg`;
             await writeFile(`${path}/imgs/${fileName}`, picture);
-            let url = `http://${'192.168.0.9'}:${PORT}/imgs/${fileName}`;
+            let url = `http://${HOST}:${PORT}/imgs/${fileName}`;
             res.json({status: 1, url : url});
             return
 
