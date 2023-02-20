@@ -80,7 +80,7 @@ class controller {
             } 
             console.log(files);
             console.log(count++);
-            res.json({status: 1, url : url});
+            res.json({status: 1, url : fileName});
             return
 
         }catch(e){
