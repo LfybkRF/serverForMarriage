@@ -72,7 +72,7 @@ class controller {
             const picture = await img.composite([{ input: textSVG }]).toBuffer();
             let fileName = `${randomInt(100000)}_${parseInt(Date.now())}.jpg`;
             await writeFile(`${path}/imgs/${fileName}`, picture);
-            let url = `http://${HOST}:${PORT}/imgs/${fileName}`;
+            let url = `http://${'https://serverformarriage.onrender.com'}/imgs/${fileName}`;
             files.push(fileName);
             if (files.length > 15) {
                 await unlink(`${path}/imgs/${files[0]}`);
